@@ -4,6 +4,9 @@ from Warehouse import Warehouse
 
 
 class TestInventoryAllocator(unittest.TestCase):
+    """
+    test_InventoryAllocator is a Unit Test which tests functionality of the InventoryAllocator class
+    """
 
     # tests when 1 warehouse perfectly matches a 1 item order
     def test_one(self):
