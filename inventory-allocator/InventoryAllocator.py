@@ -37,7 +37,7 @@ class InventoryAllocator:
                     shared_items.append(item)
             # If there are any shared items between the order and the Warehouse
             if len(shared_items) > 0:
-                # This is the Warehouse with shared items, however, it is undetermined how much of which item this
+                # This is the Warehouse with shared items, however, it is undetermined how much of which items this
                 # Warehouse will ship
                 ret_w = Warehouse(w.name, {})
                 # Loops over each shared item

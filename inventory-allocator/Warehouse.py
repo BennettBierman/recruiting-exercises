@@ -1,7 +1,7 @@
 class Warehouse:
     """
-       Warehouse encapsulates a string and a dictionary of strings and integers.
-       """
+    Warehouse encapsulates a string and a dictionary of strings and integers.
+    """
     def __init__(self, name, inventory):
         """
         Construct a new 'Warehouse' object.
