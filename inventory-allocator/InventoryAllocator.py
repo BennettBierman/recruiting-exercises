@@ -23,7 +23,7 @@ class InventoryAllocator:
         determines if any items from the order are in that Warehouse, and if they are, adds
         that Warehouse to the list of Warehouses being returned with the items and quantities it
         should ship.
-        :return: List of Warehouses containing items they need to ship based on the order
+        :return: List of Warehouses ret containing items they need to ship based on the order
         """
         ret = []
         # Loops through each Warehouse in warehouses
@@ -54,7 +54,10 @@ class InventoryAllocator:
                     else:
                         ret_w.inventory[item] = w.inventory[item]
                         self.order[item] = self.order[item] - w.inventory[item]
+                # Add Warehouse to the list of Warehouses being returned
                 ret.append(ret_w)
+        # Checks whether order was complete and returns empty list if it was not
         if len(self.order.keys()) > 0:
             return []
+        # Returns list of Warehouses
         return ret
